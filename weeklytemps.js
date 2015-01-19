@@ -1,4 +1,6 @@
-
+//Craig Austgen
+//exercise for class
+//1-19-2015
 function weekTemps() {
    this.dataStore = [];
    this.add = add;
