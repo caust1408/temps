@@ -1,26 +1,27 @@
 //Craig Austgen
 //exercise for class
 //1-19-2015
-function weekTemps() {
-   this.dataStore = [];
-   this.add = add;
-   this.average = average;
+function weekTemps() {                        // creates array from temps
+   this.data = [];                            
+   this.add = add;                            // creates a function of add
+   this.average = average;                    // creates an average function
 }
 
-function add(temp) {
-   this.dataStore.push(temp);
+function add(temp) {                         // pushes temp onto the stack
+   this.data.push(temp);
 }
 
-function average() {
-   var total = 0;
-   for (var i = 0; i < this.dataStore.length; ++i) {
-      total += this.dataStore[i];
+function average() {                         // the average function takes all o
+	                                     // of the temps and averages them
+   var total = 0;                           
+   for (var i = 0; i < this.data.length; ++i) {
+      total += this.data[i];
    }
-   return total / this.dataStore.length;
+   return total / this.data.length;
 }
 
-var thisWeek = new weekTemps();
-thisWeek.add(52);
+var thisWeek = new weekTemps();               // creates new object
+thisWeek.add(52);                             // adds the temps
 thisWeek.add(55);
 thisWeek.add(61);
 thisWeek.add(65);
